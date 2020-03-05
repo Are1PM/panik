@@ -11,6 +11,8 @@ if (isset($_GET['bat'])) {
 		require("application/instansi/form-tambah.php");
 	} elseif ($_GET['bat'] == "ubah-data-instansi") {
 		require("application/instansi/form-ubah.php");
+	} elseif ($_GET['bat'] == "hapus-instansi") {
+		require("application/instansi/hapus-instansi.php");
 
 		// User
 	} elseif ($_GET['bat'] == "data-user") {
