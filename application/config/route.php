@@ -11,12 +11,18 @@ if (isset($_GET['bat'])) {
 		require("application/instansi/form-tambah.php");
 	} elseif ($_GET['bat'] == "ubah-data-instansi") {
 		require("application/instansi/form-ubah.php");
+
+		// User
 	} elseif ($_GET['bat'] == "data-user") {
 		require("application/user/data.php");
 	} elseif ($_GET['bat'] == "tambah-data-user") {
 		require("application/user/form-tambah.php");
 	} elseif ($_GET['bat'] == "ubah-data-user") {
 		require("application/user/form-ubah.php");
+
+		// Comment Center
+	} elseif ($_GET['bat'] == "data-comment-center") {
+		require("application/comment/data.php");
 	}
 } else {
 	require("template/content.php");

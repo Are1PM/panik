@@ -23,7 +23,7 @@
                             </ul>
                         </li>
                         <li><a href="?bat=data-instansi">Data Instansi</a></li>
-                        <li><a href="tab.html">Data Commen Center</a></li>
+                        <li><a href="?bat=data-comment-center">Data Commen Center</a></li>
                         <li><a href="?bat=data-user">Data User</a></li>
 
                     </ul>
