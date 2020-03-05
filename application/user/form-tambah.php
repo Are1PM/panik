@@ -23,12 +23,13 @@ $query = $koneksi->query('SELECT id_instansi, nama_instansi FROM tb_instansi');
                     <div class="form-group">
                         <label>level</label>
                         <select class="form-control" name="level">
-                            <option value="1">Admin</option>
-                            <option value="2">Instansi</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Instansi">Instansi</option>
+                            <option value="Operator">Operator</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>level</label>
+                        <label>Instansi</label>
                         <select class="form-control" name="id_instansi">
                             <?php
                             while ($data = mysqli_fetch_array($query)) {

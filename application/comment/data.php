@@ -24,6 +24,7 @@
                                  <th>Lokasi</th>
                                  <th>Waktu Laporan</th>
                                  <th>Instansi</th>
+                                 <th>Aksi</th>
 
                              </tr>
                          </thead>
@@ -34,10 +35,20 @@
                                     while ($data = mysqli_fetch_array($query, MYSQLI_BOTH)) { ?>
                                      <td><?= $i ?></td>
                                      <td><?= $data['nama_instansi'] ?></td>
-                                     <td><?= $data['alamat'] ?></td>
-                                     <td class="center"><?= $data['waktu'] ?></td>
-                                     <td class="center"><?= $data['id_instansi'] ?></td>
-
+                                     <td><?= $data['alamat_instansi'] ?></td>
+                                     <td class="center"><?= $data['waktu_comment'] ?></td>
+                                     <td class="center"><?= $data['nama_instansi'] ?></td>
+                                     <td class="center">
+                                         <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
+                                             <i class="fa fa-pencil"></i>
+                                         </a> |
+                                         <a href="?bat=detail-data-user&id=<?= $data['id_user'] ?>">
+                                             <i class="fa fa-eye"></i>
+                                         </a> |
+                                         <a href="">
+                                             <i class="fa fa-trash-o"></i>
+                                         </a>
+                                     </td>
                              </tr>
                          <?php $i++;
                                     } ?>

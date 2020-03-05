@@ -1,6 +1,6 @@
  <?php
 
-    $query = $koneksi->query("SELECT * FROM tb_user");
+    $query = $koneksi->query("SELECT * FROM tb_user inner join tb_instansi WHERE tb_instansi.id_instansi=tb_user.id_instansi");
 
     ?>
  <div class="row pad-botm">
@@ -40,7 +40,7 @@
                                      <td><?= $data['username'] ?></td>
                                      <td><?= $data['password'] ?></td>
                                      <td class="center"><?= $data['level'] ?></td>
-                                     <td class="center"><?= $data['id_instansi'] ?></td>
+                                     <td class="center"><?= $data['nama_instansi'] ?></td>
                                      <td class="center">
                                          <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
                                              <i class="fa fa-pencil"></i>
