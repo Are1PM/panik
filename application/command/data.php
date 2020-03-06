@@ -21,9 +21,9 @@
                              <tr>
                                  <th>No</th>
                                  <th>Instansi</th>
-                                 <th>Lokasi</th>
+                                 <th>Alamat</th>
                                  <th>Waktu Laporan</th>
-                                 <th>Instansi</th>
+                                 <th>Map</th>
                                  <th>Aksi</th>
 
                              </tr>
@@ -33,24 +33,25 @@
                                  <?php
                                     $i = 1;
                                     while ($data = mysqli_fetch_array($query, MYSQLI_BOTH)) { ?>
-                                     <td><?= $i ?></td>
-                                     <td><?= $data['nama_instansi'] ?></td>
-                                     <td><?= $data['alamat_instansi'] ?></td>
-                                     <td class="center"><?= $data['waktu_comment'] ?></td>
-                                     <td class="center"><?= $data['nama_instansi'] ?></td>
-                                     <td class="center">
-                                         <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
-                                             <i class="fa fa-pencil"></i>
-                                         </a> |
-                                         <a href="?bat=detail-data-user&id=<?= $data['id_user'] ?>">
-                                             <i class="fa fa-eye"></i>
-                                         </a> |
-                                         <a href="">
-                                             <i class="fa fa-trash-o"></i>
-                                         </a>
-                                     </td>
+                                 <td><?= $i ?></td>
+                                 <td><?= $data['nama_instansi'] ?></td>
+                                 <td><?= $data['alamat_instansi'] ?></td>
+                                 <td class="center"><?= $data['waktu_comment'] ?></td>
+                                 <td class="center"><?= $data['map_instansi'] ?></td>
+                                 <td class="center">
+                                     <!-- <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
+                                         <i class="fa fa-pencil"></i>
+                                     </a> | -->
+                                     <a href="?bat=detail-data-command&id=<?= $data['id_user'] ?>">
+                                         <i class="fa fa-eye"></i>
+                                     </a>
+                                     <!-- |
+                                     <a href="">
+                                         <i class="fa fa-trash-o"></i>
+                                     </a> -->
+                                 </td>
                              </tr>
-                         <?php $i++;
+                             <?php $i++;
                                     } ?>
                          </tbody>
                      </table>

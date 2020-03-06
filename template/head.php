@@ -15,11 +15,13 @@
     <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="assets/select2/dist/css/select2.min.css">
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!-- sweetalert -->
-   <link rel="stylesheet" type="text/css" href="assets/sw/dist/sweetalert.css">
-    
+    <link rel="stylesheet" type="text/css" href="assets/sw/dist/sweetalert.css">
+
 
 
 </head>

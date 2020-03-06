@@ -39,25 +39,25 @@ $query = $koneksi->query("SELECT * FROM tb_instansi");
                             // die;
                             while ($data = mysqli_fetch_array($query)) {
                             ?>
-                                <tr class="odd gradeX">
-                                    <td><?= $i ?></td>
-                                    <td><?= $data['foto_instansi'] ?></td>
-                                    <td><?= $data['nama_instansi'] ?></td>
-                                    <td class="center"><?= $data['no_hp'] ?></td>
-                                    <td class="center"><?= $data['alamat_instansi'] ?></td>
-                                    <td class="center"><?= $data['map_instansi'] ?></td>
-                                    <td class="center">
-                                        <a href="?bat=ubah-data-instansi&id=<?= $data['id_instansi'] ?>">
-                                            <i class="fa fa-pencil"></i>
-                                        </a> |
-                                        <a href="?bat=detail-data-instansi">
-                                            <i class="fa fa-eye"></i>
-                                        </a> |
-                                        <a href="?bat=hapus-instansi&hapus=<?= $data['id_instansi'] ?>">
-                                            <i class="fa fa-trash-o"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr class="odd gradeX">
+                                <td><?= $i ?></td>
+                                <td><?= $data['foto_instansi'] ?></td>
+                                <td><?= $data['nama_instansi'] ?></td>
+                                <td class="center"><?= $data['no_hp'] ?></td>
+                                <td class="center"><?= $data['alamat_instansi'] ?></td>
+                                <td class="center"><?= $data['map_instansi'] ?></td>
+                                <td class="center">
+                                    <a href="?bat=ubah-data-instansi&id=<?= $data['id_instansi'] ?>">
+                                        <i class="fa fa-pencil"></i>
+                                    </a> |
+                                    <a href="?bat=detail-data-instansi&id=<?= $data['id_instansi'] ?>">
+                                        <i class="fa fa-eye"></i>
+                                    </a> |
+                                    <a href="?bat=hapus-instansi&hapus=<?= $data['id_instansi'] ?>">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                </td>
+                            </tr>
                             <?php
                                 $i++;
                             }

@@ -36,24 +36,24 @@
                                  <?php
                                     $i = 1;
                                     while ($data = mysqli_fetch_array($query)) { ?>
-                                     <td><?= $i ?></td>
-                                     <td><?= $data['username'] ?></td>
-                                     <td><?= $data['password'] ?></td>
-                                     <td class="center"><?= $data['level'] ?></td>
-                                     <td class="center"><?= $data['nama_instansi'] ?></td>
-                                     <td class="center">
-                                         <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
-                                             <i class="fa fa-pencil"></i>
-                                         </a> |
-                                         <a href="?bat=detail-data-user&id=<?= $data['id_user'] ?>">
-                                             <i class="fa fa-eye"></i>
-                                         </a> |
-                                         <a href="">
-                                             <i class="fa fa-trash-o"></i>
-                                         </a>
-                                     </td>
+                                 <td><?= $i ?></td>
+                                 <td><?= $data['username'] ?></td>
+                                 <td><?= $data['password'] ?></td>
+                                 <td class="center"><?= $data['level'] ?></td>
+                                 <td class="center"><?= $data['nama_instansi'] ?></td>
+                                 <td class="center">
+                                     <a href="?bat=ubah-data-user&id=<?= $data['id_user'] ?>">
+                                         <i class="fa fa-pencil"></i>
+                                     </a> |
+                                     <a href="?bat=detail-data-user&id=<?= $data['id_user'] ?>">
+                                         <i class="fa fa-eye"></i>
+                                     </a> |
+                                     <a href="">
+                                         <i class="fa fa-trash-o"></i>
+                                     </a>
+                                 </td>
                              </tr>
-                         <?php $i++;
+                             <?php $i++;
                                     } ?>
                          </tbody>
                      </table>

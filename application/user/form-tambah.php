@@ -22,7 +22,7 @@ $query = $koneksi->query('SELECT id_instansi, nama_instansi FROM tb_instansi');
                     </div>
                     <div class="form-group">
                         <label>level</label>
-                        <select class="form-control" name="level">
+                        <select class="form-control select2" name="level">
                             <option value="Admin">Admin</option>
                             <option value="Instansi">Instansi</option>
                             <option value="Operator">Operator</option>
@@ -30,11 +30,11 @@ $query = $koneksi->query('SELECT id_instansi, nama_instansi FROM tb_instansi');
                     </div>
                     <div class="form-group">
                         <label>Instansi</label>
-                        <select class="form-control" name="id_instansi">
+                        <select class="form-control select2" name="id_instansi">
                             <?php
                             while ($data = mysqli_fetch_array($query)) {
                             ?>
-                                <option value="<?= $data['id_instansi'] ?>"><?= $data['nama_instansi'] ?></option>
+                            <option value="<?= $data['id_instansi'] ?>"><?= $data['nama_instansi'] ?></option>
                             <?php
                             }
                             ?>

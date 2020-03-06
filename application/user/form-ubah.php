@@ -26,15 +26,17 @@ if (isset($_GET['id'])) {
                 <form role="form" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="username" value="<?= $user['username'] ?>" placeholder="Username" required>
+                        <input type="text" class="form-control" name="username" value="<?= $user['username'] ?>"
+                            placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="text" class="form-control" name="password" value="<?= $user['password'] ?>" placeholder="Password" required>
+                        <input type="text" class="form-control" name="password" value="<?= $user['password'] ?>"
+                            placeholder="Password" required>
                     </div>
                     <div class="form-group">
                         <label>level</label>
-                        <select class="form-control" name="level">
+                        <select class="form-control select2" name="level">
                             <option value="1" <?= ($user['password'] == 1) ? "Selected" : "" ?>>Admin</option>
                             <option value="2" <?= ($user['password'] == 2) ? "Selected" : "" ?>>Instansi</option>
                         </select>
